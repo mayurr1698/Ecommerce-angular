@@ -1,0 +1,19 @@
+<div class="container" >
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+    <div class="col mb-4" *ngFor="let product of products" >
+      <div class="card h-100 shadow bg-white rounded" *ngIf="product.active" >
+        <div class="card-body">
+        <img src="{{product.imageUrl}}" class="card-img-top" alt="...">
+          <!-- <h5 class="card-title">{{product.sku}}</h5> -->
+          <h6 class="card-subtitle mb-2 text-muted">{{product.name}}</h6>
+          <!-- <p class="card-text">{{product.description}}</p> -->
+            <hr>
+          <h6>Price: {{product.unitPrice | currency: 'INR'}}</h6>
+          <!-- <h6>Available: {{product.unitsInStocks ? product.unitsInStocks :'NA' }}</h6> -->
+          <button  type="button" class="btn btn-primary">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+ <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+</div>
